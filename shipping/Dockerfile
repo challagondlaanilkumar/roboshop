@@ -1,10 +1,10 @@
 #
 # Build
 #
-FROM debian:10 AS build
+FROM ubuntu:20.04 AS build
 
 RUN apt-get update && \
-    apt-get install -y maven=3.9.6 && \
+    apt-get install -y maven && \
     apt-get autoclean && \
     apt-get upgrade && \
     apt-get install -f
